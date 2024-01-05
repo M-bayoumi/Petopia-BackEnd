@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Petopia.Data\Petopia.Data.csproj" />
+    <ProjectReference Include="..\Petopia.Infrastructure\Petopia.Infrastructure.csproj" />
+    <ProjectReference Include="..\Petopia.Service\Petopia.Service.csproj" />
+  </ItemGroup>
+
+</Project>

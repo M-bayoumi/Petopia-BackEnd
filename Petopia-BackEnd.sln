@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petopia.Api", "Petopia.Api\Petopia.Api.csproj", "{B46A37EC-CCBB-4EE2-970C-8F0EAAB9C5D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petopia.Data", "Petopia.Data\Petopia.Data.csproj", "{34A727A2-F13B-4E27-8F85-5FA96FFA2C4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petopia.Infrastructure", "Petopia.Infrastructure\Petopia.Infrastructure.csproj", "{FD979B68-FD70-4D2C-BDF3-9E6BE0A298D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petopia.Service", "Petopia.Service\Petopia.Service.csproj", "{EBDB6B57-1B05-4B6A-9678-28294CAD5C3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petopia.Core", "Petopia.Core\Petopia.Core.csproj", "{7F3B53BA-9646-4A02-9E91-1972315EB5A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B46A37EC-CCBB-4EE2-970C-8F0EAAB9C5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B46A37EC-CCBB-4EE2-970C-8F0EAAB9C5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B46A37EC-CCBB-4EE2-970C-8F0EAAB9C5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B46A37EC-CCBB-4EE2-970C-8F0EAAB9C5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A727A2-F13B-4E27-8F85-5FA96FFA2C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A727A2-F13B-4E27-8F85-5FA96FFA2C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A727A2-F13B-4E27-8F85-5FA96FFA2C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A727A2-F13B-4E27-8F85-5FA96FFA2C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD979B68-FD70-4D2C-BDF3-9E6BE0A298D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD979B68-FD70-4D2C-BDF3-9E6BE0A298D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD979B68-FD70-4D2C-BDF3-9E6BE0A298D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD979B68-FD70-4D2C-BDF3-9E6BE0A298D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDB6B57-1B05-4B6A-9678-28294CAD5C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDB6B57-1B05-4B6A-9678-28294CAD5C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDB6B57-1B05-4B6A-9678-28294CAD5C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDB6B57-1B05-4B6A-9678-28294CAD5C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F3B53BA-9646-4A02-9E91-1972315EB5A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3B53BA-9646-4A02-9E91-1972315EB5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3B53BA-9646-4A02-9E91-1972315EB5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3B53BA-9646-4A02-9E91-1972315EB5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6968043-CA4D-41C2-9B56-62EEFB338B14}
+	EndGlobalSection
+EndGlobal
