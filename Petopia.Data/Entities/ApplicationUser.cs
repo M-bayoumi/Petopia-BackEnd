@@ -13,7 +13,6 @@ namespace Petopia.Data.Entities
         public byte[] Cover { get; set; } = new byte[0];
         public bool blocked { get; set; } = false;
 
-
         public int CountryId { get; set; }
         public Country Country { get; set; } = null!;
         public int CityId { get; set; }
@@ -21,7 +20,6 @@ namespace Petopia.Data.Entities
         public int AreaId { get; set; }
         public Area Area { get; set; } = null!;
         public string Street { get; set; } = string.Empty;
-
 
         public virtual ICollection<Friend> Friends { get; set; } = new HashSet<Friend>();
         public virtual ICollection<Follower> Followers { get; set; } = new HashSet<Follower>();
@@ -37,7 +35,6 @@ namespace Petopia.Data.Entities
         public virtual ICollection<Cart> Carts { get; set; } = new HashSet<Cart>();
         public virtual ICollection<Clinic> Clinics { get; set; } = new HashSet<Clinic>();
         public virtual ICollection<ClinicRate> ClinicRates { get; set; } = new HashSet<ClinicRate>();
-
 
         public int? AnimalId { get; set; }
         public Animal? Animal { get; set; }
