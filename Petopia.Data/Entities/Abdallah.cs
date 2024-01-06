@@ -12,5 +12,7 @@ namespace Petopia.Data.Entities
         public string Name { get; set; }    
         public string Description { get; set; } 
 
+        public int AbdallahId { get; set; }
+
     }
 }
