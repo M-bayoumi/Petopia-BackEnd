@@ -9,5 +9,6 @@ namespace Petopia.Data.Entities
     public class AhmedEdit
     {
         public int id { get; set; }
+        public string Name { get; set; }    
     }
 }
