@@ -35,30 +35,4 @@ namespace Petopia.Data.Configurations
                .IsRequired();
         }
     }
-    public class AreaConfiguration : IEntityTypeConfiguration<Area>
-    {
-        public void Configure(EntityTypeBuilder<Area> builder)
-        {
-            builder.HasKey(x => x.Id);
-
-            builder.Property(x => x.Name)
-               .HasColumnType("varchar(max)")
-               .IsRequired();
-        }
-    }
-    public class BlockConfiguration : IEntityTypeConfiguration<Block>
-    {
-        public void Configure(EntityTypeBuilder<Block> builder)
-        {
-            builder.HasKey(x => x.Id);
-
-            builder.Property(x => x.BlockedUserId)
-               .HasColumnType("varchar(max)")
-               .IsRequired();
-
-            builder.Property(x => x.Date)
-              .HasColumnType("dateTime")
-              .IsRequired();
-        }
-    }
 }

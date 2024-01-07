@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Petopia.Data.Entities;
 
-namespace School.infrastructure.Data
+namespace Petopia.infrastructure.Data
 {
     public class AppDbContext : DbContext
     {

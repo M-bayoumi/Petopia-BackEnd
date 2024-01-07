@@ -7,7 +7,7 @@ namespace Petopia.Data.Entities
     {
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
-        public DateOnly BirthDate { get; set; } = new DateOnly();
+        public DateTime BirthDate { get; set; } = new DateTime();
         public GenderEnum Gender { get; set; }
         public bool blocked { get; set; } = false;
 

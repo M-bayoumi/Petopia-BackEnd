@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using School.infrastructure.Data;
+using Petopia.infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
