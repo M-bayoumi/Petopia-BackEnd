@@ -33,6 +33,25 @@ namespace Petopia.Data.Configurations
             builder.Property(x => x.Street)
                .HasColumnType("varchar(max)")
                .IsRequired();
+
+            builder.HasOne(x => x.WishList)
+              .WithOne(x => x.ApplicationUser)
+              .HasForeignKey<WishList>(x => x.UserId)
+              .IsRequired();
+
+
+            builder.HasOne(x => x.Cart)
+                .WithOne(x => x.ApplicationUser)
+                .HasForeignKey<Cart>(x => x.UserId)
+                .IsRequired();
+
+            builder.HasOne(x => x.Animal)
+                .WithOne(x => x.ApplicationUser)
+                .HasForeignKey<Animal>(x => x.UserId)
+                .IsRequired();
+
+
+
         }
     }
 }
