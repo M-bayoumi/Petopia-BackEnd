@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Petopia.Data.Entities
+﻿namespace Petopia.Data.Entities
 {
-    public class Worktime
+    public class WorkTime
     {
         public int Id { get; set; }
-
-        public int ClincId { get; set; }
-
-        public string Day { get; set; }
-
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        public Clinic Clinics { get; set; } = null!;
-
-        public Booking Bookings { get; set; } = null!;
+        public int ClinicId { get; set; }
+        public virtual Clinic Clinic { get; set; } = null!;
+        public virtual ClinicBook? ClinicBook { get; set; }
     }
 }

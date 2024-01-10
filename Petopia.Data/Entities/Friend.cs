@@ -3,10 +3,10 @@
     public class Friend
     {
         public int Id { get; set; }
-        public string FriendId { get; set; } = null!;
-        public virtual ApplicationUser friend { get; set; } = null!;
-        public DateTime Date { get; set; } = DateTime.Now;
-        public string UserId { get; set; } = null!;
-        public virtual ApplicationUser User { get; set; } = null!;
+        public string FriendId { get; set; } = string.Empty;
+        public DateTime Date { get; set; } = new DateTime();
+        public string ApplicationUserId { get; set; } = null!;
+        public virtual ApplicationUser ApplicationUser { get; set; } = null!;
+
     }
 }

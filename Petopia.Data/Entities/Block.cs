@@ -3,9 +3,8 @@
     public class Block
     {
         public int Id { get; set; }
-        public string BlockedUserId { get; set; } = null!;
-        public DateTime Date { get; set; } = DateTime.Now;
-        public string UserId { get; set; } = null!;
-        public virtual ApplicationUser User { get; set; } = null!;
+        public string BlockedId { get; set; } = string.Empty;
+        public string ApplicationUserId { get; set; } = null!;
+        public virtual ApplicationUser ApplicationUser { get; set; } = null!;
     }
 }

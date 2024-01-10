@@ -3,14 +3,11 @@
     public class ShelterRate
     {
         public int Id { get; set; }
-        public string Comment { get; set; } = null!;
-        public string Rate { get; set; } = null!;
+        public int Rate { get; set; }
+        public string Comment { get; set; } = string.Empty;
         public int ShelterId { get; set; }
-        public string UserId { get; set; } = null!;
-
-
-
-        public virtual ICollection<ApplicationUser> Users { get; set; } = null!;
-        public Shelter shelter { get; set; } = null!;
+        public virtual Shelter Shelter { get; set; } = null!;
+        public string ApplicationUserId { get; set; } = null!;
+        public virtual ApplicationUser ApplicationUser { get; set; } = null!;
     }
 }
