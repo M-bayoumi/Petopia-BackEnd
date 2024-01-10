@@ -12,11 +12,15 @@ namespace Petopia.Data.Entities
         public bool blocked { get; set; } = false;
 
         public int CountryId { get; set; }
-        public Country Country { get; set; } = null!;
+        public virtual Country Country { get; set; } = null!;
         public int CityId { get; set; }
         public City City { get; set; } = null!;
         public int AreaId { get; set; }
         public Area Area { get; set; } = null!;
+        public virtual Animal Animal { get; set; } = null!;
+        public virtual WishList WishList { get; set; } = null!;
+        public virtual Cart Cart { get; set; } = null!;
+        
         public string Street { get; set; } = string.Empty;
 
         public virtual ICollection<ProfileImage> ProfileImages { get; set; } = new HashSet<ProfileImage>();
@@ -33,6 +37,9 @@ namespace Petopia.Data.Entities
         public virtual ICollection<Clinic> Clinics { get; set; } = new List<Clinic>();
         public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
         public virtual ICollection<ClincRate> ClincRates { get; set; } = new List<ClincRate>();
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+        public virtual ICollection<ProductRate> ProductRates { get; set; } = new List<ProductRate>();
 
     }
 }
