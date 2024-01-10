@@ -22,22 +22,26 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.ApplicationUsers)
                .WithOne(x => x.Country)
                .HasForeignKey(x => x.CountryId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Clinics)
                .WithOne(x => x.Country)
                .HasForeignKey(x => x.CountryId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Shelters)
                .WithOne(x => x.Country)
                .HasForeignKey(x => x.CountryId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Products)
               .WithOne(x => x.Country)
               .HasForeignKey(x => x.CountryId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
 
             builder.ToTable("Countries");

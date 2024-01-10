@@ -37,27 +37,32 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.ProductImages)
               .WithOne(x => x.Product)
               .HasForeignKey(x => x.ProductId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.ProductRates)
               .WithOne(x => x.Product)
               .HasForeignKey(x => x.ProductId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.WishListProducts)
               .WithOne(x => x.Product)
               .HasForeignKey(x => x.ProductId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.CartProducts)
               .WithOne(x => x.Product)
               .HasForeignKey(x => x.ProductId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.OrderProducts)
              .WithOne(x => x.Product)
              .HasForeignKey(x => x.ProductId)
-             .IsRequired();
+             .IsRequired()
+             .OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Products");
 

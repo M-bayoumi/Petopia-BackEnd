@@ -37,17 +37,20 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.Animals)
                .WithOne(x => x.Shelter)
                .HasForeignKey(x => x.ShelterId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Adoptions)
               .WithOne(x => x.Shelter)
               .HasForeignKey(x => x.ShelterId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.ShelterRates)
               .WithOne(x => x.Shelter)
               .HasForeignKey(x => x.ShelterId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
 
             builder.ToTable("Shelters");

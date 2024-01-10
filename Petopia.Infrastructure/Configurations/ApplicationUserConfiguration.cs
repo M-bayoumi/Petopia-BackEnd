@@ -41,57 +41,68 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.Blocks)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Friends)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Followers)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Followings)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Photos)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Posts)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.ProfileImages)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.CoverImages)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Reactions)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Comments)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Shares)
                .WithOne(x => x.ApplicationUser)
                .HasForeignKey(x => x.ApplicationUserId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Clinics)
                .WithOne(x => x.ApplicationUser)

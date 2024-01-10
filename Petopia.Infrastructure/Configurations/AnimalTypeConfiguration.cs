@@ -22,12 +22,14 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.ApplicationUsers)
                 .WithOne(x => x.AnimalType)
                 .HasForeignKey(x => x.AnimalTypeId)
-                .IsRequired();
+                .IsRequired()
+                .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Animals)
                .WithOne(x => x.AnimalType)
                .HasForeignKey(x => x.AnimalTypeId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("AnimalTypes");
 

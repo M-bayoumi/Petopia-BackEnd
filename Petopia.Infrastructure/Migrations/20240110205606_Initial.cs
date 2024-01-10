@@ -144,26 +144,22 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ApplicationUsers_AnimalTypes_AnimalTypeId",
                         column: x => x.AnimalTypeId,
                         principalTable: "AnimalTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ApplicationUsers_Areas_AreaId",
                         column: x => x.AreaId,
                         principalTable: "Areas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ApplicationUsers_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_ApplicationUsers_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -182,8 +178,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Blocks_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -235,20 +230,17 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Clinics_Areas_AreaId",
                         column: x => x.AreaId,
                         principalTable: "Areas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Clinics_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Clinics_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -269,8 +261,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_CoverImages_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -289,8 +280,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Followers_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -309,8 +299,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Followings_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -330,8 +319,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Friends_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -372,8 +360,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Photos_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -394,8 +381,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Posts_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -433,8 +419,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Products_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -455,8 +440,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ProfileImages_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -489,20 +473,17 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Shelters_Areas_AreaId",
                         column: x => x.AreaId,
                         principalTable: "Areas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Shelters_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Shelters_Countries_CountryId",
                         column: x => x.CountryId,
                         principalTable: "Countries",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -548,8 +529,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ClinicRates_Clinics_ClinicId",
                         column: x => x.ClinicId,
                         principalTable: "Clinics",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -596,8 +576,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_CartProducts_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -623,8 +602,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_OrderProducts_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -643,8 +621,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ProductImages_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -671,8 +648,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ProductRates_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -696,8 +672,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Comments_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Comments_CoverImages_CoverImageId",
                         column: x => x.CoverImageId,
@@ -744,8 +719,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Reactions_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Reactions_CoverImages_CoverImageId",
                         column: x => x.CoverImageId,
@@ -798,8 +772,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Shares_ApplicationUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "ApplicationUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Shares_CoverImages_CoverImageId",
                         column: x => x.CoverImageId,
@@ -848,14 +821,12 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Animals_AnimalTypes_AnimalTypeId",
                         column: x => x.AnimalTypeId,
                         principalTable: "AnimalTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Animals_Shelters_ShelterId",
                         column: x => x.ShelterId,
                         principalTable: "Shelters",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -882,8 +853,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ShelterRates_Shelters_ShelterId",
                         column: x => x.ShelterId,
                         principalTable: "Shelters",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -902,8 +872,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_WishListProducts_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_WishListProducts_WishLists_WishListId",
                         column: x => x.WishListId,
@@ -934,8 +903,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_ClinicBooks_WorkTimes_WorkTimeId",
                         column: x => x.WorkTimeId,
                         principalTable: "WorkTimes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -968,8 +936,7 @@ namespace Petopia.Infrastructure.Migrations
                         name: "FK_Adoptions_Shelters_ShelterId",
                         column: x => x.ShelterId,
                         principalTable: "Shelters",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

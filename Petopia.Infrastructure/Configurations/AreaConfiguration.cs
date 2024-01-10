@@ -17,17 +17,20 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.ApplicationUsers)
                .WithOne(x => x.Area)
                .HasForeignKey(x => x.AreaId)
-               .IsRequired();
+               .IsRequired()
+               .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Clinics)
               .WithOne(x => x.Area)
               .HasForeignKey(x => x.AreaId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Shelters)
              .WithOne(x => x.Area)
              .HasForeignKey(x => x.AreaId)
-             .IsRequired();
+             .IsRequired()
+             .OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Areas");
         }

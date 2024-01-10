@@ -12,7 +12,7 @@ using Petopia.infrastructure.Data;
 namespace Petopia.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240110204051_Initial")]
+    [Migration("20240110205606_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -1148,7 +1148,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Shelter", "Shelter")
                         .WithMany("Adoptions")
                         .HasForeignKey("ShelterId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Animal");
@@ -1163,13 +1163,13 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.AnimalType", "AnimalType")
                         .WithMany("Animals")
                         .HasForeignKey("AnimalTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.Shelter", "Shelter")
                         .WithMany("Animals")
                         .HasForeignKey("ShelterId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AnimalType");
@@ -1182,25 +1182,25 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.AnimalType", "AnimalType")
                         .WithMany("ApplicationUsers")
                         .HasForeignKey("AnimalTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.Area", "Area")
                         .WithMany("ApplicationUsers")
                         .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.City", "City")
                         .WithMany("ApplicationUsers")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.Country", "Country")
                         .WithMany("ApplicationUsers")
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AnimalType");
@@ -1228,7 +1228,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Blocks")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1256,7 +1256,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Product", "Product")
                         .WithMany("CartProducts")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Cart");
@@ -1286,19 +1286,19 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Area", "Area")
                         .WithMany("Clinics")
                         .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.City", "City")
                         .WithMany("Clinics")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.Country", "Country")
                         .WithMany("Clinics")
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1321,7 +1321,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.WorkTime", "WorkTime")
                         .WithOne("ClinicBook")
                         .HasForeignKey("Petopia.Data.Entities.ClinicBook", "WorkTimeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1340,7 +1340,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Clinic", "Clinic")
                         .WithMany("ClinicRates")
                         .HasForeignKey("ClinicId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1353,7 +1353,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Comments")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.CoverImage", "CoverImage")
@@ -1396,7 +1396,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("CoverImages")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1407,7 +1407,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Followers")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1418,7 +1418,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Followings")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1429,7 +1429,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Friends")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1457,7 +1457,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Product", "Product")
                         .WithMany("OrderProducts")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Order");
@@ -1470,7 +1470,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Photos")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1481,7 +1481,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Posts")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1504,7 +1504,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Country", "Country")
                         .WithMany("Products")
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1519,7 +1519,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -1536,7 +1536,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Product", "Product")
                         .WithMany("ProductRates")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1549,7 +1549,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("ProfileImages")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1560,7 +1560,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Reactions")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.CoverImage", "CoverImage")
@@ -1611,7 +1611,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("Shares")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.CoverImage", "CoverImage")
@@ -1660,19 +1660,19 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Area", "Area")
                         .WithMany("Shelters")
                         .HasForeignKey("AreaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.City", "City")
                         .WithMany("Shelters")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.Country", "Country")
                         .WithMany("Shelters")
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1695,7 +1695,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Shelter", "Shelter")
                         .WithMany("ShelterRates")
                         .HasForeignKey("ShelterId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -1719,7 +1719,7 @@ namespace Petopia.Infrastructure.Migrations
                     b.HasOne("Petopia.Data.Entities.Product", "Product")
                         .WithMany("WishListProducts")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Petopia.Data.Entities.WishList", "WishList")

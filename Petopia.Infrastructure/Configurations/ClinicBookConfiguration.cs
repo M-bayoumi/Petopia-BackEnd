@@ -12,7 +12,8 @@ namespace Petopia.infrastructure.Configurations
 
             builder.HasOne(x => x.WorkTime)
               .WithOne(x => x.ClinicBook)
-              .HasForeignKey<ClinicBook>(x => x.WorkTimeId);
+              .HasForeignKey<ClinicBook>(x => x.WorkTimeId)
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("ClinicBooks");
 

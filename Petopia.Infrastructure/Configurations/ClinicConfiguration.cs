@@ -37,7 +37,8 @@ namespace Petopia.infrastructure.Configurations
             builder.HasMany(x => x.ClinicRates)
               .WithOne(x => x.Clinic)
               .HasForeignKey(x => x.ClinicId)
-              .IsRequired();
+              .IsRequired()
+              .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.WorkTimes)
               .WithOne(x => x.Clinic)
