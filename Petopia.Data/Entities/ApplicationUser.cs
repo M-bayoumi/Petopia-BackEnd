@@ -30,7 +30,7 @@ namespace Petopia.Data.Entities
         public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
         public virtual ICollection<Share> Shares { get; set; } = new HashSet<Share>();
         public virtual ICollection<Photo> Photos { get; set; } = new HashSet<Photo>();
-        public virtual ICollection<Clinics> Clinics { get; set; } = new List<Clinics>();
+        public virtual ICollection<Clinic> Clinics { get; set; } = new List<Clinic>();
         public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
         public virtual ICollection<ClincRate> ClincRates { get; set; } = new List<ClincRate>();
 

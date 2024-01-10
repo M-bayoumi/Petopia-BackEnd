@@ -14,7 +14,7 @@ namespace Petopia.Data.Configurations
                .HasColumnType("varchar(max)")
                .IsRequired();
 
-            builder.Property(x => x.Media)
+            builder.Property(x => x.Image)
                .HasColumnType("varbinary(max)")
                .IsRequired();
 

@@ -16,7 +16,7 @@ namespace Petopia.Data.Entities
 
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        public Clinics Clinics { get; set; } = null!;
+        public Clinic Clinics { get; set; } = null!;
 
         public Booking Bookings { get; set; } = null!;
     }

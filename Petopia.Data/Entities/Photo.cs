@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string Caption { get; set; } = null!;
-        public byte[] Media { get; set; } = new byte[0];
+        public byte[] Image { get; set; } = new byte[0];
         public DateTime Date { get; set; } = DateTime.Now;
         public string UserId { get; set; } = null!;
         public virtual ApplicationUser User { get; set; } = null!;

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Petopia.Data.Configurations
 {
-    public class ClincImagesConfigurations : IEntityTypeConfiguration<ClinicImages>
+    public class ClincImagesConfigurations : IEntityTypeConfiguration<ClinicImage>
     {
-        public void Configure(EntityTypeBuilder<ClinicImages> builder)
+        public void Configure(EntityTypeBuilder<ClinicImage> builder)
         {
             builder.HasKey(x => x.Id);
 

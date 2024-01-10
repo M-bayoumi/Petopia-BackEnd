@@ -16,6 +16,6 @@ namespace Petopia.Data.Entities
 
        
         public ApplicationUser User { get; set; } = null!;
-        public Clinics Clinics { get; set; } = null!;
+        public Clinic Clinics { get; set; } = null!;
     }
 }
