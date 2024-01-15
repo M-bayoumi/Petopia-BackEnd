@@ -12,4 +12,16 @@
     <ProjectReference Include="..\Petopia.Service\Petopia.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Countries\Commands\Handlers\" />
+    <Folder Include="Features\Countries\Commands\Models\" />
+    <Folder Include="Features\Countries\Commands\Validators\" />
+    <Folder Include="Mapping\Countries\CommandMapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
 </Project>

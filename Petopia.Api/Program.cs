@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Petopia.Core;
 using Petopia.infrastructure.Data;
+using Petopia.Infrastructure;
+using Petopia.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(constr);
 });
 #endregion
+
+builder.Services
+    .AddInfrastructureDependencies()
+    .AddServiceDependencies()
+    .AddCoreDependencies();
 
 var app = builder.Build();
 

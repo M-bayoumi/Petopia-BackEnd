@@ -17,10 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Petopia.Core\Petopia.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Petopia.Infrastructure\Petopia.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
